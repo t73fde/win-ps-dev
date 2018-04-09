@@ -9,6 +9,7 @@ RUN set -ex \
  && dnf -y copr enable petersen/pandoc \
  && dnf -y install \
         docker-ce \
+        findutils \
         git \
         pandoc \
         postgresql \
