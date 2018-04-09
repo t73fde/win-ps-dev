@@ -27,6 +27,5 @@ RUN set -ex \
         "pylint-django<0.9" \
         "astroid<1.6" \
         mypy \
-        tox \
  && rm -rf /var/cache/* /root/.cache /tmp/.[A-Za-z]* /tmp/* \
  && echo "Done"
