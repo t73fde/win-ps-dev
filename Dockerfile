@@ -17,7 +17,7 @@ RUN set -ex \
         which \
  && ln -s /usr/bin/python3 /usr/bin/python \
  && ln -s /usr/bin/pip-3 /usr/bin/pip \
- && /usr/bin/pip3 install -U pip \
+ && /usr/bin/pip3 install -U "pip<10,>=9.0.3" \
         pipenv \
         pydocstyle \
         flake8 \
