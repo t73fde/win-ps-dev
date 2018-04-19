@@ -26,9 +26,9 @@ RUN set -ex \
         mccabe \
         dodgy \
         coverage \
-        "pylint<1.8" \
-        "pylint-django<0.9" \
-        "astroid<1.6" \
+        pylint \
+        pylint-django \
+        astroid \
         mypy \
  && rm -rf /var/cache/* /root/.cache /tmp/.[A-Za-z]* /tmp/* \
  && echo "Done"
