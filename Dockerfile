@@ -21,6 +21,9 @@ RUN set -ex \
         pipenv \
         pydocstyle \
         flake8 \
+        flake8-bugbear \
+        flake8-import-order \
+        mccabe \
         dodgy \
         coverage \
         "pylint<1.8" \
