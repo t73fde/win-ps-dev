@@ -3,6 +3,7 @@ FROM fedora:27
 # && dnf -y upgrade --refresh  \
 
 RUN set -ex \
+ && echo "Start - $(date  +%Y%m%dZ%H%M%S)" \
  && dnf -y install dnf-plugins-core \
  && dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo \
  && dnf -y install 'dnf-command(copr)' \
@@ -19,6 +20,7 @@ RUN set -ex \
  && ln -s /usr/bin/pip-3 /usr/bin/pip \
  && /usr/bin/pip3 install -U "pip<10,>=9.0.3" \
         pipenv \
+        black \
         pydocstyle \
         flake8 \
         flake8-bugbear \
@@ -31,4 +33,4 @@ RUN set -ex \
         astroid \
         mypy \
  && rm -rf /var/cache/* /root/.cache /tmp/.[A-Za-z]* /tmp/* \
- && echo "Done"
+ && echo "Done - $(date  +%Y%m%dZ%H%M%S)"
