@@ -16,10 +16,11 @@ RUN set -ex \
         postgresql \
         sudo \
         which \
- && ln -s /usr/bin/python3 /usr/bin/python \
- && ln -s /usr/bin/pip-3 /usr/bin/pip \
- && /usr/bin/pip3 install -U "pip<10,>=9.0.3" \
+        python3-tox \
         pipenv \
+ && rm -f /usr/bin/python && ln -s /usr/bin/python3 /usr/bin/python \
+ && rm -f /usr/bin/pip && ln -s /usr/bin/pip-3 /usr/bin/pip \
+ && /usr/bin/pip install -U "pip<10,>=9.0.3" \
         black \
         pydocstyle \
         flake8 \
