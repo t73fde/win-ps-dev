@@ -21,12 +21,7 @@ RUN set -ex \
  && rm -f /usr/bin/python && ln -s /usr/bin/python3 /usr/bin/python \
  && rm -f /usr/bin/pip && ln -s /usr/bin/pip-3 /usr/bin/pip \
  && /usr/bin/pip install -U "pip<10,>=9.0.3" \
-        black \
         pydocstyle \
-        flake8 \
-        flake8-bugbear \
-        flake8-import-order \
-        mccabe \
         dodgy \
         coverage \
         pylint \
