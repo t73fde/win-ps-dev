@@ -18,6 +18,7 @@ RUN set -ex \
         which \
         python3-tox \
         pipenv \
+        gcc-c++ \
  && rm -f /usr/bin/python && ln -s /usr/bin/python3 /usr/bin/python \
  && rm -f /usr/bin/pip && ln -s /usr/bin/pip-3 /usr/bin/pip \
  && /usr/bin/pip install -U "pip<10,>=9.0.3" \
@@ -28,5 +29,8 @@ RUN set -ex \
         pylint-django \
         astroid \
         mypy \
+        pytype \
+        pyre-check \
+ && dnf -y remove gcc-c++ \
  && rm -rf /var/cache/* /root/.cache /tmp/.[A-Za-z]* /tmp/* \
  && echo "Done - $(date  +%Y%m%dZ%H%M%S)"
