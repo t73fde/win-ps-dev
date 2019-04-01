@@ -1,4 +1,4 @@
-FROM fedora:28
+FROM fedora:29
 # Need to upgrade, because of some problems with pip.
 # && dnf -y upgrade --refresh  \
 
