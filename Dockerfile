@@ -1,4 +1,4 @@
-FROM fedora:29
+FROM fedora:30
 # Need to upgrade, because of some problems with pip.
 # && dnf -y upgrade --refresh  \
 
@@ -17,7 +17,9 @@ RUN set -ex \
         sudo \
         which \
         pipenv \
+        gcc \
         gcc-c++ \
+        postgresql-devel \
  && rm -f /usr/bin/python && ln -s /usr/bin/python3 /usr/bin/python \
  && rm -f /usr/bin/pip && ln -s /usr/bin/pip-3 /usr/bin/pip \
  && dnf -y remove gcc-c++ \
