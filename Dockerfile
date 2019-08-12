@@ -13,15 +13,12 @@ RUN set -ex \
         findutils \
         git \
         pandoc \
-        postgresql \
         sudo \
         which \
         pipenv \
         gcc \
-        gcc-c++ \
         postgresql-devel \
  && rm -f /usr/bin/python && ln -s /usr/bin/python3 /usr/bin/python \
  && rm -f /usr/bin/pip && ln -s /usr/bin/pip-3 /usr/bin/pip \
- && dnf -y remove gcc-c++ \
  && rm -rf /var/cache/* /root/.cache /tmp/.[A-Za-z]* /tmp/* \
  && echo "Done - $(date  +%Y%m%dZ%H%M%S)"
