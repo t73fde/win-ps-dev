@@ -17,6 +17,7 @@ RUN set -ex \
         which \
         pipenv \
         gcc \
+        postgresql \
         postgresql-devel \
  && rm -f /usr/bin/python && ln -s /usr/bin/python3 /usr/bin/python \
  && rm -f /usr/bin/pip && ln -s /usr/bin/pip-3 /usr/bin/pip \
